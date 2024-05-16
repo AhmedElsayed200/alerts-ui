@@ -1,5 +1,23 @@
-.alert_container {
-  border: 1px solid red;
+.container {
+  position: relative;
+  border: 2px dotted #ffffff;
+  border-radius: 10px;
   padding: 20px;
   margin: 20px;
+  width: 400px;
+  color: #ffffff;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }

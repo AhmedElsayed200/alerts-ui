@@ -1,18 +1,18 @@
-import { BellRing, X } from "lucide-react";
+import React from "react";
+import { IAlertProps } from "../../../interfaces/alert";
 import "./index.scss";
 
-const Alert = () => {
+const Alert: React.FC<IAlertProps> = (props) => {
+  const { title, description, Icon, color } = props;
+
   return (
-    <div className="alert_container">
-      <BellRing />
-      <h1>Title</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque vero
-        cupiditate dolor similique alias possimus sunt inventore ex tenetur
-        aliquam soluta, nesciunt eligendi ipsa, quas itaque quaerat sed suscipit
-        explicabo.
-      </p>
-      <X />
+    <div className="container" style={{ backgroundColor: color }}>
+      <div className="heading">
+        {/* Render the icon component */}
+        {<Icon size={12} />}
+        <p>{title}</p>
+      </div>
+      <p>{description}</p>
     </div>
   );
 };
